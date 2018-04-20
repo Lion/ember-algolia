@@ -3,7 +3,7 @@
 
 **Global**: `Ember.Logger`
 
-**Location**: `addon/services/algolia.js` at line 13
+**Location**: `addon/services/algolia.js` at line 15
 
 ```js
         return this.accessIndex(query.indexName).search(query.query, params, callback);
@@ -17,7 +17,7 @@
 
 **Global**: `Ember.Logger`
 
-**Location**: `addon/services/algolia.js` at line 30
+**Location**: `addon/services/algolia.js` at line 32
 
 ```js
       }

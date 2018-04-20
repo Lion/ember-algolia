@@ -1,10 +1,19 @@
-/* eslint-env node */
 'use strict';
 
 const path = require('path');
 
 module.exports = {
   name: 'ember-algolia',
+
+  included(app) {
+    this._super.included(app);
+    app.import('node_modules/algoliasearch/dist/algoliasearch.js', {
+      using: [
+        { transformation: 'amd', as: 'algolia-search' }
+      ]
+    });
+  },
+
   updateFastBootManifest(manifest) {
     const app = this._findHost();
     const pkg = require(path.join(app.project.root, 'package.json'));

@@ -1,12 +1,12 @@
 import { set } from '@ember/object';
 import config from '../config/environment';
-import algoliasearch from 'npm:algoliasearch';
+import algoliaSearch from 'algolia-search';
 
 export function initialize( appInstance ) {
     const service = appInstance.lookup('service:algolia');
     const algoliaConfig = config['ember-algolia'];
 
-    set(service, 'client', algoliasearch(algoliaConfig.algoliaId, algoliaConfig.algoliaKey));
+    set(service, 'client', algoliaSearch(algoliaConfig.algoliaId, algoliaConfig.algoliaKey));
 
 }
 
